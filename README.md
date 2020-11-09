@@ -1,3 +1,4 @@
+
 # Memcached
 
 Memcached server implentation, in which TCP/IP clients can connect whit it in order to save key/value pairs.
@@ -63,4 +64,22 @@ As an example:
 rspec memcached_spec.rb
 ```
 
+## Considerations
+
+The memcached protocol indicates the end of a line with "\r\n".
+
+JMeter tests uses "\n" as the end of line. In order to pass JMeter test a flag was implemented to accept both end of lines.
+
+To switch to "\n" end of line in the memcached server is required to add an extra parameter to the command that runs the script.
+
+```bash
+ruby main.rb 1
+```
+
 ## JMeter
+
+Open Jmeter GUI, import the test file and run it.
+
+```bash
+Memcached Sampler.jmx
+```
