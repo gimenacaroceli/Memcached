@@ -41,7 +41,7 @@ set bad_key 0 0 5
 hi
 add bad_key 0 0 8
 value
-add add_key 0 0 5
+set add_key 0 0 5
 value
 get add_key
 set other_add_key 0 0 11
@@ -95,7 +95,7 @@ quit
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="-980132772">STORED
+              <stringProp name="-256274487">STORED
 VALUE key 0 5
 value
 END
@@ -104,7 +104,7 @@ CLIENT_ERROR bad data chunk
 ERROR
 CLIENT_ERROR bad data chunk
 ERROR
-NOT STORED
+STORED
 VALUE add_key 0 5
 value
 END

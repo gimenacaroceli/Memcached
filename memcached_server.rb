@@ -121,11 +121,9 @@ class MemcachedServer
   def handle_pends
     length = @bytes.to_i + @memcached[@key][:length].to_i
     if @command == 'append'
-      store_data(@memcached[@key][:value] + @value, @memcached[@key][:flags],
-                 @memcached[@key][:max_time], length)
+      store_data(@memcached[@key][:value] + @value, @memcached[@key][:flags], @memcached[@key][:max_time], length)
     elsif @command == 'prepend'
-      store_data(@value + @memcached[@key][:value], @memcached[@key][:flags],
-                 @memcached[@key][:max_time], length)
+      store_data(@value + @memcached[@key][:value], @memcached[@key][:flags], @memcached[@key][:max_time], length)
     end
   end
 
